@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <!--Import google buttons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+
+  <h2 class="welcome-heading">Welcome to the Weather App, by Rishit Mohanty!</h2>
+
+  <main class="main-container">
+    <header class="input-container">
+      <!--city input bar-->
+      <input type="text" class="city-input" placeholder="Search a city">
+      <button class="search-button">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </header>
+
+    <section class="weather-info" style="display: none;"> 
+      <div class="location-date-container">
+        <div class="location"> 
+          <!--Location icon-->
+          <span class="material-symbols-outlined">location_on</span>
+          <h4 class="place-name">Bilaspur</h4>
+        </div>
+        <h5 class="current-date regular-txt" style="font-size: 20px;">Thu, 13 March</h5>
+      </div>
+
+      <!--Weather info-->
+      <div class="weather-summary-container">
+        <img src="clouds-cloud-svgrepo-com.svg" alt="Weather Icon" class="weather-summary">
+        <div class="weather-summary-info">
+          <h3 class="temperature" style="font-size: 30px;">28°C</h3>
+          <h3 class="condition-txt regular-txt" style="font-size: 30px;">Clouds</h3>
+        </div>
+      </div>
+
+      <div class="weather-conditions-container">
+        <div class="condition-item">
+          <span class="material-symbols-outlined">water_drop</span>
+          <div class="condition-information">
+            <h5 class="humidity">Humidity:</h5>
+            <h5 class="humidity-value-txt">55%</h5>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <span class="material-symbols-outlined">air</span>
+          <div class="condition-information">
+            <h5 class="Windy">Wind speed:</h5>
+            <h5 class="windy-value-txt">15km/h</h5>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <span class="material-symbols-outlined">aq</span>
+          <div class="condition-information">
+            <h5 class="air">Air Quality:</h5>
+            <h5 class="air-value-txt">270</h5>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <span class="material-symbols-outlined">allergy</span>
+          <div class="condition-information">
+            <h5 class="pollen">Pollen:</h5>
+            <h5 class="pollen-value-txt">Nil</h5>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!--Forecast of future-->
+      
+      <div class="forecast-items-container">
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">11th Mar</h5>
+          <img src="cloud-with-hail-svgrepo-com.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">19°C</h5>
+        </div>
+
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">12th Mar</h5>
+          <img src="drizzle.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">25°C</h5>
+        </div>
+
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">13th Mar</h5>
+          <img src="atmosphere.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">21°C</h5>
+        </div>
+
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">14th Mar</h5>
+          <img src="clear.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">38°C</h5>
+        </div>
+      
+
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">15th Mar</h5>
+          <img src="snow.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">11°C</h5>
+        </div>
+    
+
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">16th Mar</h5>
+          <img src="cloud-with-hail-svgrepo-com.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">22°C</h5>
+        </div>
+
+        
+        <div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt">17th Mar</h5>
+          <img src="clear.svg" alt="Forecast Icon" class="forecast-item-img">
+          <h5 class="forecast-one-value">45°C</h5>
+        </div>
+
+      </div>
+      
+    </section>
+
+    <!-- intro section -->
+    <section class="search-city section-message">
+       <div>
+        <h1 class="search">Search City</h1>
+        <h4 class="regular-txt information">Check out the weather condition of the city</h4>
+        <img class = "mag-glass" src="search-engine-magnifying-glass-svgrepo-com.svg">
+       </div>
+    </section>
+
+    <!-- not found error -->
+    <section class="not-found section-message" style="display: none;">
+      <div>
+       <img class = "cant-find" src="404-error.png">
+      </div>
+   </section>
+
+  </main>
+</body>
+</html>
