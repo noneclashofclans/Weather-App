@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.welcome-heading {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 90px;
+    backdrop-filter: blur(150px);
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+/* UTILITY */
+.regular-txt {
+    font-weight: 400;
+    font-size: 24px;
+}
+/* END */
+
+body {
+    background: url('images.jpeg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+
+.main-container {
+    width: 490px;
+    height: 710px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 65px;
+    padding: 20px;
+    z-index: 1;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* INPUT BOX */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.city-input {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.14);
+    outline: none;
+    font-weight: 500;
+    transition: border 0.2s ease-in-out;
+    padding-right: 50px;
+    color: white;
+}
+
+.city-input:focus {
+    border: 5px solid rgba(255, 255, 255, 0.6);
+}
+
+.city-input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.search-button {
+    position: absolute;
+    right: 16px;
+    top: 55%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* TEXT STYLES */
+.place-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.current-date {
+    margin-left: auto;
+    font-size: 19px;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+/* WEATHER INFO */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.weather-summary { /* Weather icon */
+    height: 120px;
+    width: 120px;
+}
+
+.weather-summary-info {
+    text-align: end;
+}
+
+.weather-summary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.location span { /* Location icon */
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+/* WEATHER CONDITIONS - Updated Styling */
+.weather-conditions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+    width: inherit;
+    border-radius: 36px;
+    backdrop-filter: blur(165px);
+    overflow: auto;
+    overflow-x: auto;
+    scrollbar-width: none;  /*hides scrollbar */
+} 
+
+/* Individual Condition Cards */
+.condition-item {
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 36px;
+    backdrop-filter: blur(25px);
+    min-width: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s,background;
+    height: 116px;
+}
+
+.condition-item:hover{
+    background: rgb(255,255,255,0.45);
+}
+
+.condition-item span {
+    font-size: 40px;
+}
+
+/* FORECAST SECTION */
+.forecast-items-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none; /* Hides scrollbar for a cleaner look */
+}
+
+.forecast-item {
+    width: 190px;
+    height: 170px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-radius: 36px;
+    backdrop-filter: blur(20px);
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.forecast-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.16);
+}
+
+.forecast-item h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.forecast-item img {
+    width: 90px;
+    height: 90px;
+    margin: 8px 0%;
+}
+
+.forecast-one-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* Before the actual page */
+.section-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-top: 30%;
+}
+
+.search{
+    font-size: 39px;
+    text-decoration: underline;
+}
+
+.mag-glass{
+    height: 150px;
+    width: fit-content;
+    margin-top: 15%;
+    padding-right: 30px;
+}
+
+.cant-find{
+    height: 300px;
+    width: fit-content;
+}
